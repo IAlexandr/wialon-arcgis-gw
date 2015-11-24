@@ -1,10 +1,5 @@
 const version = require('./package.json').version;
 const optionsSpec = {
-  mongoDbUrl: {
-    required: true,
-    default: 'mongodb://localhost:27017/wialon',
-    env: 'W_MONGODBURL'
-  },
   W_PORT: {
     required: true,
     default: '4445',
