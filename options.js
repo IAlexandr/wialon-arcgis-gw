@@ -29,6 +29,11 @@ const optionsSpec = {
     required: true,
     default: 20163,
     env: 'W_WIALON_RETRANSLATOR_PORT'
+  },
+  FEATURE_SERVER_URL: {
+    required: true,
+    default: 'http://10.157.197.97/arcgis/rest/services/cheb/zhkh_devices/FeatureServer/0',
+    env: 'W_FEATURE_SERVER_URL'
   }
 
 };
