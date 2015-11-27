@@ -20,6 +20,17 @@ const optionsSpec = {
     default: 'kitdemo',
     env: 'W_WIALON_P'
   },
+  DEFAULT_PROTOCOL_TYPE: {
+    required: true,
+    default: require('./lib/server/protocol-types').WIALON_RETRANSLATOR,
+    env: 'W_DEFAULT_PROTOCOL_TYPE'
+  },
+  WIALON_RETRANSLATOR_PORT: {
+    required: true,
+    default: 20163,
+    env: 'W_WIALON_RETRANSLATOR_PORT'
+  }
+
 };
 
 let options = {
