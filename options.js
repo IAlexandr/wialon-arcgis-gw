@@ -32,9 +32,24 @@ const optionsSpec = {
   },
   FEATURE_SERVER_URL: {
     required: true,
-    default: 'http://10.157.197.97/arcgis/rest/services/cheb/zhkh_devices/FeatureServer/0',
+    default: 'http://.../arcgis/rest/services/cheb/cheb_zhkh_tractors/FeatureServer/0',
     env: 'W_FEATURE_SERVER_URL'
-  }
+  },
+  REG_SOCKET_HOSTS: {
+    require: true,
+    default: "1.1.1.1,2.2.2.2",
+    env: 'W_REG_SOCKET_HOSTS',
+    preprocess: function (src) {
+      return src ? _.map(src.split(','), function (s) {
+        return parseInt(_.trim(s));
+      }) : [];
+    }
+  },
+  WSSERVER_PORT: {
+    required: true,
+    default: 8888,
+    env: 'W_WSSERVER_PORT'
+  },
 
 };
 
