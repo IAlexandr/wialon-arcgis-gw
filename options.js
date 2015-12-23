@@ -7,7 +7,7 @@ const optionsSpec = {
   },
   UPDATER_TO: {
     required: true,
-    default: 10 * 1000,
+    default: 20 * 1000,
     env: 'W_UPDATER_TO'
   },
   WIALON_U: {
@@ -37,12 +37,14 @@ const optionsSpec = {
   },
   REG_SOCKET_HOSTS: {
     require: true,
-    default: "1.1.1.1,2.2.2.2",
+    default: "10.10.10.10,1.1.1.1",
     env: 'W_REG_SOCKET_HOSTS',
     preprocess: function (src) {
-      return src ? _.map(src.split(','), function (s) {
-        return parseInt(_.trim(s));
+      const sr = src ? src.split(',').map(function (s) {
+        return s.trim();
       }) : [];
+      console.log('regHosts: ', JSON.stringify(sr, null, 2));
+      return sr;
     }
   },
   WSSERVER_PORT: {
