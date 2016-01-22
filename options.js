@@ -52,6 +52,11 @@ const optionsSpec = {
     default: 8888,
     env: 'W_WSSERVER_PORT'
   },
+  BROADCAST_TYPE: {
+    required: true,
+    default: "arcgis-fc and ws", //"arcgis-fc and ws", "arcgis-fc", "ws"
+    env: 'W_BROADCAST_TYPE'
+  },
 
 };
 
