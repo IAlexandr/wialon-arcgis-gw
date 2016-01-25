@@ -31,8 +31,8 @@ const optionsSpec = {
     env: 'W_WIALON_RETRANSLATOR_PORT'
   },
   FEATURE_SERVER_URL: {
-    required: true,
-    default: 'http://.../arcgis/rest/services/cheb/cheb_zhkh_tractors/FeatureServer/0',
+    required: false,
+    default: '',
     env: 'W_FEATURE_SERVER_URL'
   },
   REG_SOCKET_HOSTS: {
