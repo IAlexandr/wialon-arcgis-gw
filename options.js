@@ -37,7 +37,7 @@ const optionsSpec = {
   },
   REG_SOCKET_HOSTS: {
     require: true,
-    default: "10.10.10.10,1.1.1.1",
+    default: '*',// "10.10.10.10,1.1.1.1",
     env: 'W_REG_SOCKET_HOSTS',
     preprocess: function (src) {
       const sr = src ? src.split(',').map(function (s) {
