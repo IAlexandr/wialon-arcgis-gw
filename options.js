@@ -54,7 +54,7 @@ const optionsSpec = {
   },
   BROADCAST_TYPE: {
     required: true,
-    default: "arcgis-fc and ws", //"arcgis-fc and ws", "arcgis-fc", "ws"
+    default: "ws", //"arcgis-fc and ws", "arcgis-fc", "ws"
     env: 'W_BROADCAST_TYPE'
   },
 
